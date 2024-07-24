@@ -10,6 +10,14 @@ text: [] output => ["0"]
 
 
 def fn_hack_6(s):
-    result = s
-    #...
+    if not s:
+        return ["0"]
+    
+    result = []
+    for i, caracter in enumerate(s, start=1):
+        if i % 2 == 0:
+            result.append("-")
+        else:
+            result.append(str(i))
+    
     return result
